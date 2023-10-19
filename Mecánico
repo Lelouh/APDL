@@ -1,0 +1,60 @@
+!!!APDL Mecanico
+
+
+NROPT,FULL,,,
+
+*get,CLS,ACTIVE,,set,LSTP
+
+*if,CLS,EQ,0,then
+	*do,asd,1,80,1
+			esel,s,mat,,asd
+			ekill,all
+			allsel
+	*enddo
+*endif
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   CORDON 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*if,CLS,LE,20,then
+	k=CLS
+		*if,CLS,ge,1,then
+			esel,s,mat,,k
+			ealive,all	
+			allsel
+		*endif
+*endif
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   CORDON 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*if,CLS,LE,43,then
+	k=CLS-3
+		*if,CLS,GE,24,then
+			esel,s,mat,,k
+			ealive,all	
+			allsel
+		*endif
+*endif
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   CORDON 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*if,CLS,LE,66,then
+	k=CLS-6
+		*if,CLS,GE,47,then
+			esel,s,mat,,k
+			ealive,all	
+			allsel
+		*endif
+*endif
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   CORDON 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*if,CLS,LE,89,then
+	k=CLS-9
+		*if,CLS,GE,70,then
+			esel,s,mat,,k
+			ealive,all	
+			allsel
+		*endif
+*endif
+
+
+
